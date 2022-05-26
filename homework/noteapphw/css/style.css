@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+
+    margin: 0;
+}
+.setting-container{
+    width: 10%;
+    height: 100vh;
+
+    position: relative;
+}
+.drag-container{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+
+.color{
+    width: 20px;
+    height: 20px;
+    /* background-color: lawngreen; */
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    z-index : -1;
+
+    cursor: pointer;
+
+    transition: all 0.6s;
+}
+.color:nth-of-type(1){
+    transition-delay: 0;
+}
+.color:nth-of-type(2){
+    transition-delay: 0.2s;
+}
+.color:nth-of-type(3){
+    transition-delay: 0.4s;
+}
+.color:nth-of-type(4){
+    transition-delay: 0.6s;
+}
+.color:nth-of-type(5){
+    transition-delay: 0.8s;
+}
+.btn.active + .color-container .color:nth-of-type(1){
+    top: 150%;
+    left: 50%;
+
+    transition-delay: 0;
+
+    background-color: khaki;
+}
+.btn.active + .color-container .color:nth-of-type(2){
+    top: 250%;
+    left: 50%;
+
+    transition-delay: 0.2s;
+
+    background-color: lawngreen;
+}
+.btn.active + .color-container .color:nth-of-type(3){
+    top: 350%;
+    left: 50%;
+
+    transition-delay: 0.4s;
+
+    background-color: lightcoral;
+}
+.btn.active + .color-container .color:nth-of-type(4){
+    top: 450%;
+    left: 50%;
+
+    transition-delay: 0.6s;
+
+    background-color: lightskyblue;
+}
+.btn.active + .color-container .color:nth-of-type(5){
+    top: 550%;
+    left: 50%;
+
+    transition-delay: 0.8s;
+
+    background-color: magenta;
+}
+.note-container{
+    width: 90%;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+    padding: 5.5rem 1.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+}
+.title{
+    font-size: 3rem;
+    /* margin: 0;
+    padding: 0; */
+
+    position: absolute;
+    top: 0;
+    left: calc(1.5rem + 10px);
+    z-index: 1;
+}
+.note{
+    width: 250px;
+    height: 250px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+
+    overflow: hidden;
+}
+.note .note-toolbar{
+    background-color: #f9f9f9;
+    padding: 5px;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    position: relative;
+
+}
+.note-title{
+    margin: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.toolbtn{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: #fff;
+    background: #000;
+    border: 0;
+    margin: 0 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+.note .textarea{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-size: 18px;
+    padding: 10px;
+}
+.textarea:focus{
+    outline: 0;
+}
+.doc{
+    width: 100%;
+    /* height: 100%; */
+    word-wrap: break-word;  
+    background-color: #fff;
+    padding: 10px;
+    font-size: 18px;
+}
+.hidden{
+    display: none;
+}
+
+
+/* change note color */
+.note.green,.note.green .doc,.note.green .textarea{
+    background-color: lawngreen;
+}
+.note.green .note-toolbar{
+    background-color: limegreen;
+}
+
+.note.khaki,.note.khaki .doc,.note.khaki .textarea{
+    background-color: khaki;
+}
+.note.khaki .note-toolbar{
+    background-color: #d1bf1d;
+}
+
+.note.lightcoral,.note.lightcoral .doc,.note.lightcoral .textarea{
+    background-color: lightcoral;
+}
+.note.lightcoral .note-toolbar{
+    background-color: #ee5a5a;
+}
+
+.note.lightskyblue,.note.lightskyblue .doc,.note.lightskyblue .textarea{
+    background-color: lightskyblue;
+}
+.note.lightskyblue .note-toolbar{
+    background-color: #2fa7c2;
+}
+
+.note.magenta,.note.magenta .doc,.note.magenta .textarea{
+    background-color: magenta;
+}
+.note.magenta .note-toolbar{
+    background-color: #d156cb;
+}
+
+@media (max-width:800px) {
+    .setting-container{
+        width: 20%;
+    }
+    .note-container{
+        width: 80%;
+    }
+}

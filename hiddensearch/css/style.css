@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(
+        90deg,
+        #733dd9,
+        #552e9e
+    );
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    overflow: hidden;
+}
+
+.search{
+    height: 50px;
+    
+    position: relative;
+}
+.search .input{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    font-size: 18px;/*normal font-size = 12px*/
+    border: 0;
+    padding: 15px;
+
+    transition: all 0.3s ease;
+}
+.search .input::placeholder{
+    color: silver;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    font-size: 24px;
+    border: 0;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: all 0.3s ease;
+}
+.input:focus , .btn:focus{
+    outline: none;
+}
+
+/*the width change when class name 'active' include in .search*/
+.search.active .input{
+    width: 200px;
+}
+.search.active .btn{
+    /*btn move left because its parent element width bigger when input width bigger*/
+    /*so we move btn to right again*/
+    /* transform: translate(200px); */ /*we move btn to right 200px the button will start at 201px so 1px gap but it is not obvious*/
+    transform: translate(199px); /*we don't want gap so we move right to 199px*/
+}

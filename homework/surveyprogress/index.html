@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Servey Progress</title>
+        <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        
+        <h1 class="survey-title">Help us to improve our service and customer satisfaction.</h1>
+        <div class="survey-box">
+            <div class="s-status">
+                <p class="status-title">Progress(1 / 4)</p>
+
+                <div class="progress">
+                    <div class="progress-bar"></div>
+
+                    <div class="step active">1</div>
+                    <div class="step">2</div>
+                    <div class="step">3</div>
+                    <div class="step">4</div>
+ 
+                </div>
+            </div>
+            
+            <div class="s-content">
+                <form action="" method="">
+                    
+                    <div class="content-item show">
+                        <h3 class="question-text">Enter your personal info</h3>
+    
+                            <div class="input-group">
+                                
+                                    <input type="text" name="fname" id="fname" class="sinput" placeholder="First Name" required/>
+                                
+                                    <input type="text" name="lname" id="lname" class="sinput" placeholder="Last Name" required/>
+                                
+                                    <input type="text" name="email" id="email" class="sinput" placeholder="Email Address" required autocomplete="off"/>
+                                
+                                    <select name="continent" id="continent" class="sinput" required>
+                                        <option value="" disabled selected>Choose Your Continent</option>
+                                        <option value="as">Asia</option>
+                                        <option value="eu">Europe</option>
+                                    </select>
+                                    
+                                    <input type="number" name="age" id="age" class="sinput" placeholder="Age" required/>
+            
+                                    <div id="radiogroup" class="sinput">
+                                        <div><input type="radio" name="gender" id="gm" class="radioinput" required/><label for="gm">Male</label></div>
+                                        <div><input type="radio" name="gender" id="gf" class="radioinput" required/><label for="gf">Female</label></div>
+                                    </div>
+                                
+                            </div>
+    
+                            <p for="" style="text-align: center;">Do you accept <a href="#">terms and conditions</a>?</p>
+                            <div class="switch" style="text-align: center;">
+                                <input type="checkbox" name="accept" id="accept" class="" required><label for="accept" class="slider"><div class="ball"></div></label>
+                            </div>
+                    </div>
+
+                    <div class="content-item">
+                        <h3 class="question-text">Please rate your overall satisfaction about the service provided.</h3>
+                        <input type="radio" name="a2one" id="ns" class="ans"><label for="ns">Not Satisfied</label><br/>
+                        <input type="radio" name="a2one" id="qs" class="ans"><label for="qs">Quite Satisfied</label><br/>
+                        <input type="radio" name="a2one" id="s" class="ans"><label for="s">Satisfied</label><br/>
+                        <input type="radio" name="a2one" id="cs" class="ans"><label for="cs">Completely Satisfied</label><br/>
+                    </div>
+
+                    <div class="content-item">
+                        <h3 class="question-text">How did you hear about our company?</h3>
+                        <input type="radio" name="a2two" id="gg" class="ans"><label for="gg">Google</label><br/>
+                        <input type="radio" name="a2two" id="ff" class="ans"><label for="ff">A friend of mine</label><br/>
+                        <input type="radio" name="a2two" id="ad" class="ans"><label for="ad">Print Advertise</label><br/>
+                        <input type="radio" name="a2two" id="np" class="ans"><label for="np">Newspaper</label><br/>
+                    </div>
+
+                    <div class="content-item">
+                        <h3 class="question-text">Do you think to suggest our company to a friend or parent?</h3>
+                        <input type="radio" name="a2three" id="no" class="ans"><label for="no">No</label><br/>
+                        <input type="radio" name="a2three" id="mb" class="ans"><label for="mb">Maybe</label><br/>
+                        <input type="radio" name="a2three" id="pb" class="ans"><label for="pb">Probaly</label><br/>
+                        <input type="radio" name="a2three" id="su" class="ans"><label for="su">100% Sure</label><br/>
+                    </div>
+
+                </form>
+            
+            </div>
+
+            <div class="s-control">
+                <button href="#" class="controlbtn backbtn" disabled>< Backward</button>
+                <button href="#" class="controlbtn forbtn">Forward ></button>
+            </div>
+            
+        </div>
+
+
+        <script src="./js/app.js" type="text/javascript"></script>
+    </body>
+</html>

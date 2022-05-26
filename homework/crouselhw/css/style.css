@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Mulish', sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.crousel-box{
+    width: 520px;
+    /* height: 300px; */
+    background-color:#f5f5f5;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+    overflow: hidden;
+}
+.crousel-container{
+    width: 300%;
+    display: flex;
+
+    transition: all 0.7s ease-in-out;
+    /* transform: translate(-520px); */
+
+}
+
+.crousel{
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+
+    /* background-color: royalblue; */
+}
+.crousel.bigger{
+    animation: biggerani 0.7s ease-in-out;
+}
+.crousel .image{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin: auto;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.crousel p{
+    color: #666;
+}
+.crousel h1{
+    font-size: 2.5rem;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+.far{
+    font-size: 3rem;
+}
+.crousel-control{
+
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+}
+.control{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #57737A;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.control.active{
+    background-color: skyblue;
+    /* width: 15px;
+    height: 15px; */
+}
+@keyframes biggerani{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

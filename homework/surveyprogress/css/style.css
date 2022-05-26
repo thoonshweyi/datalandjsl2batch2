@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(
+        /* 360deg, */
+        
+        rgba(26,185,167,1) 50%,
+        #f4f4f4 50%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+}
+
+/* start status */
+.survey-title{
+    color: #fff;
+    font-weight: 100;
+}
+.survey-box{
+    width: 80%;
+    /* background-color: blueviolet; */
+    border-radius: 5px;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2) , -2px -2px 2px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+}
+.s-status{
+    background-color: #ddd;
+    padding: 30px 100px;
+    text-align: center;
+
+    position: relative;
+    z-index: -1;
+}
+.status-title{
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.progress{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+}
+.progress::before{
+    content: '';
+    
+    width: 100%;
+    height: 5px;
+    background-color: #aaa;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.progress-bar{
+    width: 0%;
+    height: 5px;
+    background-color: rgba(26,185,167,1);
+
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    transition: all 0.5s ease;
+}
+.step{
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border: 3px solid #aaa;
+    border-radius: 50%;
+    color: #222;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s ease;
+}
+.step.active{
+    border-color: rgba(26,185,167,1);
+
+    transition-delay: 0.5s;
+}
+/* end status */
+
+/* start content */
+.s-content{
+    min-height: 360px;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px 100px;
+}
+.content-item{
+    display: none;
+}
+.content-item.show{
+    display: block;
+}
+#accept{
+    visibility: hidden;
+}
+.slider{
+    width: 50px;
+    height: 26px;
+    background-color: #aaa;
+    border-radius: 50px;
+
+    display: inline-block;
+
+    position: relative;
+}
+.ball{
+    width: 20px;
+    height: 20px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 3px;
+    left: 3px;
+
+    animation: offani 0.3s 1 linear forwards;
+}
+#accept:checked + .slider{
+    background-color: rgba(26,185,167,1);
+}
+#accept:checked + .slider .ball{
+    animation-name: onani;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes onani{
+    0%{
+        transform: translate(0) scale(1);
+    }
+    50%{
+        transform: translate(12px) scale(1.2);
+    }
+    100%{
+        transform: translate(24px) scale(1);
+    }
+}
+@keyframes offani {
+    0%{
+        transform: translate(24px) scale(1);
+    }
+    50%{
+        transform: translate(12px) scale(1.2);
+    }
+    100%{
+        transform: translate(0) scale(1);
+    }
+
+}
+.question-text{
+    margin: 0;
+    margin-bottom: 15px;
+}
+.input-group{
+    height: 200px;
+    /* border: 1px solid #aaa; */
+    /* border: 1px solid #aaa; *** */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sinput{
+    width: 40%;
+    /* height: 50px; */
+    padding: 10px;
+    /* background-color: aqua; */
+}
+.sinput:focus,button:focus{
+    outline: 0;
+}
+#radiogroup{
+    display: flex;
+    justify-content: space-between;
+}
+.radioinput{
+    margin-left: 0;
+    margin-right: 10px;
+}
+/*end content */
+
+/*start control */
+.s-control{
+    text-align:center;
+    background-color: #ddd;
+}
+.controlbtn{
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    background-color: #333;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    margin: 10px 0;
+}
+.controlbtn:disabled{
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+/*end control */
+
+/*start content-item 2 */
+
+.ans{
+    margin: 15px 5px 25px 0;
+    cursor: pointer;
+}
+.content-item label{
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+/* end content-item 2 */

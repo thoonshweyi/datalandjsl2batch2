@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz App HW</title>
+    
+        <!--fontawesome css1 -->
+        <link href="../../../dltwdfbatch4/libs/fontawesomepro/css/all.min.css"  rel="stylesheet" type="text/css"/>
+
+        <link href="./css/style.css"  rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        
+        <div class="home">
+            <div class="title">
+                <h1>Quiz Time</h1>
+                <p>Fruits , Vegetables & Animal Quizes</p>
+    
+            </div>
+            
+            <div class="quizs-container">
+    
+                
+    
+                <div id="fruits" class="quizs-box active" style="background-image: url('./img/fruit.jpg');">
+                    <h3>Fruits Quiz - 7 Questions</h3>
+                </div>
+    
+                <div id="vegetables" class="quizs-box" style="background-image: url('./img/vegetable.jpg');">
+                    <h3>Vegetables Quiz - 7 Questions</h3>
+                </div>
+    
+                <div id="animals" class="quizs-box" style="background-image: url('./img/animal.jpg');">
+                    <h3>Animals Quiz - 7 Questions</h3>
+                </div>
+    
+            </div>
+        </div>
+
+
+        <div  class="qa-container">
+
+            <div class="heart-container">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+
+            <div class="img-container">
+                <img src="./img/fruit.jpg" id="img" alt="fruit"/>
+            </div>
+
+            <div class="answers">
+                <ul>
+                    <li id="a" class="answer">Answer1</li>
+                    <li id="b" class="answer">Answer2</li>
+                    <li id="c" class="answer">Answer3</li>
+                    <li id="d" class="answer">Answer4</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- Start Loading -->
+            <div class="blur">
+                <h1 class="loading-text">Loading</h1>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        <!-- End Loading -->
+
+
+        <script src="./js/app.js" type="text/javascript"></script>
+    </body>
+</html>
